@@ -205,7 +205,7 @@ if [ $? -eq 0 ]; then
 
 	# Detectamos la clase y aprobechamos para mostrar colores distintos para el valor de Net
 
-	if [ $first_segment -gt 1 ]  && [ $first_segment -le 9 ]; then
+	if [ $first_segment -ge 0 ]  && [ $first_segment -le 9 ]; then
 		class="A"
 		echo -e "${yellowColour}[${endColour}${greenColour}+${endColour}${yellowColour}]${endColour}${grayColour} Net${endColour}${yellowColour}:${endColour}${redColour}       Public${endColour}"
 	elif [ $first_segment -eq 10 ]; then
@@ -234,6 +234,7 @@ if [ $? -eq 0 ]; then
 		echo -e "${yellowColour}[${endColour}${greenColour}+${endColour}${yellowColour}]${endColour}${grayColour} Net${endColour}${yellowColour}:${endColour}${redColour}       Public${endColour}"
  	else
 		class="unknow"
+		echo -e "${yellowColour}[${endColour}${greenColour}+${endColour}${yellowColour}]${endColour}${grayColour} Net${endColour}${yellowColour}:${endColour}${redColour}       unknow${endColour}"
 	fi
 
 
