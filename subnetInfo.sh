@@ -184,7 +184,7 @@ if [ $? -eq 0 ]; then
 	address_spaces=$(repeat $(( 17 - ${#address} )) ' '; echo)
 	netmask_spaces=$(repeat $(( 17 - ${#netmask} )) ' '; echo)
 	wildcard_spaces=$(repeat $(( 17 - ${#wildcard} )) ' '; echo)
-	networkid_spaces=$(repeat $(( 14 - ${#networkid} )) ' '; echo)
+	networkid_spaces=$(repeat $(( 16 - ${#networkid} - ${#cid} )) ' '; echo)
 	netbroadcast_spaces=$(repeat $(( 17 - ${#netbroadcast} )) ' '; echo)
 	min_spaces=$(repeat $(( 17 - ${#min} )) ' '; echo)
 	max_spaces=$(repeat $(( 17 - ${#max} )) ' '; echo)
